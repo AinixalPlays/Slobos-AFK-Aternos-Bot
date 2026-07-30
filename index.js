@@ -1213,14 +1213,8 @@ function createBot() {
         ? config.server.version
         : false;
     bot = mineflayer.createBot({
-      username: config["bot-account"].username,
-      password: config["bot-account"].password || undefined,
-      auth: config["bot-account"].type,
-      host: config.server.ip,
-      port: config.server.port,
-      version: botVersion,
-      hideErrors: false,
-      checkTimeoutInterval: 600000,
+  username: config["bot-account"].username,
+  auth: "offline",
     });
 
     bot.loadPlugin(pathfinder);
